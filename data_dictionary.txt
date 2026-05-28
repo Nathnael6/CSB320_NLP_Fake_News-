@@ -1,0 +1,67 @@
+# Data Dictionary
+
+## Dataset 1: fake_news.csv
+
+### title
+
+* Data Type: String
+* Description: Title or headline of the news article.
+* Relationship: Related to the article text and label.
+* Limitation: Some titles may contain biased or emotional wording.
+
+### text
+
+* Data Type: String
+* Description: Main body text of the news article.
+* Relationship: Primary feature used for NLP classification.
+* Limitation: Some rows may contain very short or empty text.
+
+### subject
+
+* Data Type: String
+* Description: Topic category of the article such as politics or news.
+* Relationship: Provides additional context about the article.
+* Limitation: Categories may overlap.
+
+### date
+
+* Data Type: String
+* Description: Publication date of the article.
+* Relationship: Related to article timing.
+* Limitation: One missing value exists in the dataset.
+
+### label
+
+* Data Type: Integer
+* Description:
+
+  * 0 = Real News
+  * 1 = Fake News
+* Relationship: Target variable for classification.
+* Limitation: Labels depend on dataset source definitions.
+
+## Dataset 2: cyberbullying_tweets.csv
+
+### tweet_text
+
+* Data Type: String
+* Description: Text content of a tweet.
+* Relationship: Primary NLP feature used for classification.
+* Limitation: Tweets contain slang, abbreviations, hashtags, and informal language.
+
+### cyberbullying_type
+
+* Data Type: String
+* Description: Original cyberbullying category label.
+* Relationship: Used to generate the binary label column.
+* Limitation: Harmful intent can sometimes be subjective.
+
+### label
+
+* Data Type: Integer
+* Description:
+
+  * 0 = Not Cyberbullying
+  * 1 = Cyberbullying
+* Relationship: Binary target variable used for classification.
+* Limitation: Binary conversion simplifies multiple cyberbullying categories into one class.

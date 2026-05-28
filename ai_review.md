@@ -2,14 +2,18 @@
 
 ## AI Feedback
 
-The notebooks demonstrate a strong understanding of Natural Language Processing workflows and machine learning classification techniques. The preprocessing pipeline is well organized and includes appropriate steps such as lowercase conversion, stopword removal, lemmatization, TF-IDF feature extraction, and sentiment analysis. The use of Random Forest classifiers and evaluation metrics such as precision, recall, F1-score, confusion matrices, and cross-validation strengthens the analysis.
+The project follows the required NLP pipeline clearly and includes both a primary fake news dataset and a secondary cyberbullying dataset. The notebooks include preprocessing, TF-IDF feature extraction, sentiment analysis, Random Forest training, classification reports, confusion matrices, and cross-validation. Overall, the workflow is complete and easy to follow.
 
-One of the strongest parts of the project is the comparison between two different NLP problems. The fake news dataset achieved very high performance because the language patterns were easier to separate, while the cyberbullying dataset demonstrated the additional challenges of social media text classification. The markdown discussions clearly explain these differences and show understanding of why NLP model performance can vary depending on dataset complexity.
+However, the fake news model’s 99% accuracy should be interpreted carefully. A result this high may suggest the dataset is very easy to separate, but it could also point to possible dataset bias, strong wording patterns, or hidden differences between fake and real articles. The analysis would be stronger if it questioned whether the model is truly learning misinformation patterns or simply learning dataset-specific writing style.
 
-One possible improvement would be experimenting with additional models such as Logistic Regression, Naive Bayes, or Support Vector Machines for comparison. Another improvement could involve more advanced preprocessing for tweets, including hashtag handling, username removal, emoji processing, or balancing techniques for classification fairness.
+The cyberbullying dataset gives a more realistic view of NLP difficulty. The model performs well on the cyberbullying class but struggles with the non-cyberbullying class. This matters because false positives could unfairly label normal tweets as harmful. The binary conversion also simplifies several different cyberbullying categories into one label, which may hide important differences between types of harm.
+
+Another limitation is that only one model was tested. Random Forest is acceptable, but NLP classification often benefits from comparing models such as Naive Bayes, Logistic Regression, or Support Vector Machines. The project would also be stronger with more tweet-specific preprocessing, such as handling usernames, hashtags, emojis, URLs, sarcasm, and repeated characters.
+
+Overall, the project meets the assignment requirements, but the analysis should be careful not to overclaim. The fake news results are very strong, while the cyberbullying results show that real-world text classification is more complicated than accuracy alone can show.
 
 ---
 
-# Reflection
+## Reflection
 
-One thing that surprised me was how much harder the cyberbullying dataset was compared to the fake news dataset even though the same NLP pipeline was used. I agree with the feedback that social media text creates additional preprocessing challenges because tweets contain slang, abbreviations, and noisy language. I also think the suggestion of testing additional models like Naive Bayes or SVM would be interesting for future improvements.
+The AI feedback made me think more critically about the very high fake news score. At first, 99% accuracy looked like a perfect result, but it may also mean the dataset has patterns that make it easier than real-world fake news detection. I agree that the cyberbullying model needs careful interpretation because false positives could unfairly label people’s tweets as harmful.

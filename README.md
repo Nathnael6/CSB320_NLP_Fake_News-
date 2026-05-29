@@ -22,7 +22,7 @@ The purpose of the project is to explore how NLP techniques can classify differe
 ## Clone Repository
 
 ```bash
-git clone <repository-link>
+
 cd CSB320_NLP_Fake_News-
 ```
 
